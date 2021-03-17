@@ -61,6 +61,11 @@ describe("getCards", function () {
   // });
   test("get a card created", function () {
     let card = new Card("clubs", "king");
-    expect(card).toStrictEqual("clubs of king");
+    expect(card.suit + " of " + card.faceValue).toStrictEqual("clubs of king");
+  });
+
+  test("get a card created", function () {
+    let card = new Card("clubs", "king");
+    expect(card.suit + " of " + card.faceValue).toStrictEqual("clubs of king");
   });
 });
